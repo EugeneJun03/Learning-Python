@@ -9998,3 +9998,5 @@ Anaconda/Lib/site-packages/hamcrest/core/__init__.py
 Anaconda/Lib/site-packages/hamcrest/core/__pycache__/__init__.cpython-39.pyc
 Anaconda/Lib/site-packages/hamcrest/core/__pycache__/assert_that.cpython-39.pyc
 Anaconda/Lib/site-packages/hamcrest/core/__pycache__/base_description.cpython-39.pyc
+DumpStack.log.tmp
+pagefile.sys
