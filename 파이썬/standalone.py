@@ -22,3 +22,22 @@ print('Program argument:', sys.argv)
 import한 모듈은 해당 파일 내에 있는 코드와 변수를 사용할 수 있게 만들어 준다."""
 
 #ex) wetherman.py와 report.py파일을 만들어준다.
+
+""" report.py
+def get_description():
+    from random import choice
+    possibilities = ['rain', 'snow', 'sleet', 'fog', 'sun', 'who knows']
+    return choice(possibilities)
+"""
+
+""" weatherman.py
+import report
+description = report.get_description()
+print("To day's weather:", description)
+"""
+"""결과
+D:\파이썬>python weatherman.py
+To day's weather: sleet
+
+D:\파이썬>python weatherman.py
+To day's weather: who knows"""
