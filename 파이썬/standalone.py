@@ -17,3 +17,8 @@ print('Program argument:', sys.argv)
 단락:함수(function)
 장:모듈(module)
 """
+
+"""이번에는 import문을 사용하여 다른 모듈을 참조하는 방법을 배워볼 것이다.
+import한 모듈은 해당 파일 내에 있는 코드와 변수를 사용할 수 있게 만들어 준다."""
+
+#ex) wetherman.py와 report.py파일을 만들어준다.
