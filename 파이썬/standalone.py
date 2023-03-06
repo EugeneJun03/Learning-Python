@@ -22,7 +22,7 @@ print('Program argument:', sys.argv)
 import한 모듈은 해당 파일 내에 있는 코드와 변수를 사용할 수 있게 만들어 준다."""
 
 #ex) wetherman.py와 report.py파일을 만들어준다.
-
+# 이 예제는 random에서 choice를 불러냈고 weatherman.py는 report.py파일을 불러왔다.
 """ report.py
 def get_description():
     from random import choice
