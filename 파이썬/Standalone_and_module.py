@@ -59,3 +59,20 @@ for i in range(35):
 from report import get_description
 description = get_description()
 print("Today's weather:", description)"""
+
+"""파이썬은 import할 파일을 어디에서 찾을까?
+디렉터리 이름의 리스트와 표준 sys모듈에 저장되어있는 ZIP파일을 변수 path로 사용한다.
+이 리스트에 접근해서 경로를 수정할 수 있다."""
+
+import sys
+for place in sys.path:
+    print(place) 
+"""
+C:\Users\genen\AppData\Local\Programs\Python\Python311\Lib\idlelib
+C:\Users\genen\AppData\Local\Programs\Python\Python311\python311.zip
+C:\Users\genen\AppData\Local\Programs\Python\Python311\Lib
+C:\Users\genen\AppData\Local\Programs\Python\Python311\DLLs
+C:\Users\genen\AppData\Local\Programs\Python\Python311
+C:\Users\genen\AppData\Local\Programs\Python\Python311\Lib\site-packages"""
+
+# 만약 표준 라이브러리와 중복된 모듈이 존재한다면 현재 디렉토리에서 먼저 찾기 때문에 표준 라이브러리에서 import할 수 없다.
