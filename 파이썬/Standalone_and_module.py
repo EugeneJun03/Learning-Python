@@ -42,6 +42,20 @@ To day's weather: sleet
 D:\파이썬>python weatherman.py
 To day's weather: who knows"""
 
-# 같은 import를 반복해서 사용하는 경우 함수내에서 쓰기보다는 밖으로 내보내는 것이 효율적일 수 있다. 
-# 모듈의 이름을 바꾸고 싶거나 줄여서 사용하고 싶을때 [import (모듈) as (바꿀이름)]으로 작성하면 간편하게 작업할수 있다.
-# ex) import turtle as t
+# 같은 import를 반복해서 사용하는 경우 함수내에서 쓰기보다는 밖으로 내보내는 것이
+# 효율적일 수 있다. 
+
+# Tip1 모듈의 이름을 바꾸고 싶거나 줄여서 사용하고 싶을때 
+# [import (모듈) as (바꿀이름)]으로 작성하면 간편하게 작업할수 있다.
+"""
+import turtle as t
+for i in range(35):
+    t.forward(1)
+    t.backward(1)"""
+
+# Tip2 큰 모듈안에서 필요한 부분만 import 하기위해서는 
+# [from (모듈) import (필요한 부분)]식으로 작성하면 된다.
+"""
+from report import get_description
+description = get_description()
+print("Today's weather:", description)"""
