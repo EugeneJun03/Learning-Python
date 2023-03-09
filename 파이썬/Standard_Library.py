@@ -66,3 +66,18 @@ bestiary = defaultdict(lambda: 'Hola!')
 >>> bestiary['D']
 'Hola!'
 '''
+
+'+ defaultdict를 사용하여 카운터 생성하기'
+from collections import defaultdict
+food_counter = defaultdict(int)
+for food in ['spam', 'spam', 'eggs', 'spam']:
+    food_counter[food] += 1
+'''
+>>> for food, count in food_counter.items():
+...     print(food, count)
+... 
+spam 3
+eggs 1
+'''
+#앞의 예제가 일반 딕셔너리였다면 없는 요소를 증가시키려고 
+# 할때미다 예외가 발생하게 된다.
