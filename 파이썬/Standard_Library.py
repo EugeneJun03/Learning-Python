@@ -39,3 +39,30 @@ periodic_table['Hydrogen'] = 1
 0
 >>> periodic_table
 defaultdict(<class 'int'>, {'Hydrogen': 1, 'Lead': 0})'''
+#defaultdict()의 인자는 값을 누락된 키에 할당하여 반환하는 함수이다.
+'ex)1'
+from collections import defaultdict
+def no_idea():
+    return 'Huh?'
+bestiary = defaultdict(no_idea)
+bestiary['A'] = 'Abominable Snowman'
+bestiary['B'] = 'Basilisk'
+'''
+>>> bestiary['A']
+'Abominable Snowman'
+>>> bestiary['B']
+'Basilisk'
+>>> bestiary['C']
+'Huh?'
+'''
+# int() = 0
+# list() = []
+# dict() = {}를 각각 반환한다. 만약 인자를 입력하지 않으면 None으로 설정된다.
+
+'+ lamda를 사용해서 인자에 기본값을 설정할 수 있다.'
+bestiary = defaultdict(lambda: 'Hola!')
+'''
+>>> bestiary = defaultdict(lambda: 'Hola!')
+>>> bestiary['D']
+'Hola!'
+'''
