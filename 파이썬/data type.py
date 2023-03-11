@@ -52,7 +52,7 @@ print(3//2)
 
 '------------------------------------------------------------------------------'
 
-#2) 문자열 : 문자의 나열을 의미한다.(문자들의 집합) 
+#2) 문자열(string) : 문자의 나열을 의미한다.(문자들의 집합) 
 # 작은 따옴표를 이용해서 문자열을 지정할 수 있다. 예> '헬로우 파이썬!!' 
 # 공백과 띄어쓰기 탭등이 그대로 유지된다.
 
@@ -104,6 +104,7 @@ print(a+b) #문자열 더하기
 
 c = "hello"
 print(c * 3)
+'hellohellohello'
 
 print("+" * 30)
 print("Hello Python")
@@ -150,6 +151,12 @@ day = date[6:8]
 print (date)
 print (time)
 print (year+"년"+month+"월"+day+"일")
+
+""" + 'How to reverse a string'
+1) stringname[stringlength::-1]
+2) stringname[::-1]
+3) use while or for structure
+"""
 
 #문자열의 교체방법
 aa = "ABCD"
