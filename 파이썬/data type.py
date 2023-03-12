@@ -257,10 +257,11 @@ print("%0.5f" %2.454545) #소숫점 5자리까지 표현하기
 # 남겨 두라는 의미이다.
 
 print("%10s" %"hello")
+'     hello'
 print("%-10s" %"hello")
-
+'hello     '
 print("%-6sPython!!" %'Hello') 
-
+'Hello Python!!'
 # 또 다른 정렬 방법
 "{0:<10}".format("hi") #죄측 정렬
 "{0:>10}".format("hi") #우측 정렬
@@ -279,12 +280,10 @@ print("%-6sPython!!" %'Hello')
 >>> a = "Python is the best choice"
 >>> a.find('b')
 14
->>> a.find('k')
->>> a = "Life is too short"
-
->>> a.index('t')
+>>> b = "Life is too short"
+>>> b.index('t')
 8
->>> a.index('k')
+>>> b.index('k')
 Traceback (most recent call last):
 File "<stdin>", line 1, in <module>
 ValueError: substring not found-1'''
@@ -298,8 +297,8 @@ ValueError: substring not found-1'''
 >>> a = "hi"
 >>> a.upper()
 'HI'
->>> a = "HI"
->>> a.lower()
+>>> b = "HI"
+>>> b.lower()
 'hi'
 '''
 
