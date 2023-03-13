@@ -82,4 +82,39 @@ eggs 1
 #앞의 예제가 일반 딕셔너리였다면 없는 요소를 증가시키려고 
 # 할 때마다 예외가 발생하게 된다.
 
-'------------------------------------------------------------------------------'
+'---------------------------------------------------------------------------'
+"""2번 항목 세기 Counter()"""
+from collections import Counter
+breakfast = ['spam', 'spam', 'egg', 'spam']
+breakfast_counter = Counter(breakfast)
+'''
+>>> breakfast_counter                     
+Counter({'spam': 3, 'egg': 1})
+'''
+# most_common()함수는 모든 요소를 내림차순으로 반환한다. 
+# 혹은 숫자를 입력하는 경우, 그 숫자만큼 상위 요소를 반환한다.
+'''
+>>> breakfast_counter.most_common()
+[('spam', 3), ('egg', 1)]
+>>> breakfast_counter.most_common(1) 
+[('spam', 3)]
+>>> breakfast_counter.most_common(2) 
+[('spam', 3), ('egg', 1)]
+'''
+# 카운터를 연산자를 활용해 결합할 수 있다.(+, -, &:교집합, |:합집합)
+lunch = ['egg', 'egg', 'bacon']
+lunch_counter = Counter(lunch)
+'''
+>>> lunch_counter                 
+Counter({'egg': 2, 'bacon': 1})
+>>> breakfast_counter + lunch_counter
+Counter({'spam': 3, 'egg': 3, 'bacon': 1})
+>>> breakfast_counter - lunch_counter 
+Counter({'spam': 3})
+>>> lunch_counter - breakfast_counter 
+Counter({'egg': 1, 'bacon': 1})
+>>> lunch_counter & breakfast_counter 
+Counter({'egg': 1})
+>>> lunch_counter | breakfast_counter 
+Counter({'spam': 3, 'egg': 2, 'bacon': 1})
+'''
