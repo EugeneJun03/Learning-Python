@@ -83,6 +83,7 @@ eggs 1
 # 할 때마다 예외가 발생하게 된다.
 
 '---------------------------------------------------------------------------'
+
 """2번 항목 세기 Counter()"""
 from collections import Counter
 breakfast = ['spam', 'spam', 'egg', 'spam']
@@ -118,3 +119,38 @@ Counter({'egg': 1})
 >>> lunch_counter | breakfast_counter 
 Counter({'spam': 3, 'egg': 2, 'bacon': 1})
 '''
+
+'---------------------------------------------------------------------------'
+
+"""3번 키 정렬하기: OrderedDict()"""
+quotes = {
+    'Moe': 'A wise guy, huh?',
+    'Larry': 'Ow!',
+    'Curly': 'Nyuk  nyuk!'
+    }
+for stooge in quotes:
+    print(stooge)
+'''
+Moe
+Larry
+Curly
+'''
+
+# OrderDict()함수는 키의 추가순서를 기억하고, 이터레이터로부터 순서대로 키값을 반환한다.
+
+from collections import OrderedDict
+quotes = OrderedDict({
+    'Moe': 'A wise guy, huh?',
+    'Larry': 'Ow!',
+    'Curly': 'Nyuk  nyuk!'
+    })
+
+for stooge in quotes:
+    print(stooge)
+'''
+Moe
+Larry
+Curly
+'''
+
+'---------------------------------------------------------------------------'
