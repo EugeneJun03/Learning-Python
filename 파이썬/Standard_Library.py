@@ -154,3 +154,36 @@ Curly
 '''
 
 '---------------------------------------------------------------------------'
+
+"""4번 데크: deque
+데크는 스텍과 큐의 기능을 모두 가진 출입구가 양 끝에 있는 큐다.
+-시퀀스의 양 끝으로부터 항목을 추가하거나 삭제할 때 유용하게 쓰인다."""
+#다음 코드는 회문(앞으로 읽으나 뒤로 읽으나 똑같은 단어)인지 확인하는 함수이다.
+
+def palindrome(word):
+    from collections import deque
+    dq = deque(word)
+    while len(dq) > 1:
+        if dq.popleft() != dq.pop():
+            return False
+    return True
+'''
+>>> palindrome('a')
+True
+>>> palindrome('racecar') 
+True
+>>> palindrome('racecr')  
+False
+'''
+
+#조금더 간단히게 인덱싱을 사용해 회문인지 확인하는 방법이 있다.
+def another_palindrome(word):
+    return word == word[::-1]
+'''
+>>> palindrome('racecar')
+True
+>>> palindrome('racecr')
+False
+'''
+
+'---------------------------------------------------------------------------'
