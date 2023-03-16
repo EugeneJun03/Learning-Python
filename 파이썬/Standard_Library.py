@@ -187,3 +187,48 @@ False
 '''
 
 '---------------------------------------------------------------------------'
+
+"""5번 코드 구조 순회하기: itertools
+itertools는 특수 목적의 이터레이터 함수를 포함하고 있다.
+for....in 루프에서 이터레이터 함수를 호출할 때 함수는 한번에 한 항목을 반환하고, 호출상태를 기억한다."""
+
+# chain() 함수는 순회가능한 인자들을 하나씩 반환한다.
+import itertools
+for item in itertools.chain([1,2],['a', 'b']):
+    print(item)
+'''
+1
+2
+a
+b
+'''
+
+# cycle() 함수는 인자를 순환하는 무한 이터레이터이다.
+import itertools
+for item in itertools.cycle([1,2]):
+    print(item)
+'''
+1
+2
+1
+2
+1
+2
+1
+....무한히 계속
+'''
+
+# accumulate() 함수는 축척된 값을 계산한다. 기본적으로 합계를 계산한다.
+import itertools
+for item in itertools.accumulate([1,2,3,4]):
+    print(item)
+'''
+1
+3
+6
+10
+'''
+#operator를 불러들여서 곱셈도 수행할 수 있다. 이외에도 많은 함수들이 존재하니 조합이나 순열을 사용할때 유용하다.
+import operator
+for item in itertools.accumulate([1,2,3,4], operator.mul):
+    print(item)
