@@ -235,7 +235,7 @@ for item in itertools.accumulate([1,2,3,4], operator.mul):
 
 '---------------------------------------------------------------------------'
 
-"""깔끔하게 출력하기: pprint()"""
+"""6번 깔끔하게 출력하기: pprint()"""
 from collections import OrderedDict
 from pprint import pprint
 quotes = OrderedDict([
@@ -255,3 +255,5 @@ OrderedDict([('Moe', 'A wise guy, huh?'),
              ('Larry', 'Ow!'),
              ('Curly', 'Nyuk nyuk')])
 '''
+
+'---------------------------------------------------------------------------'
