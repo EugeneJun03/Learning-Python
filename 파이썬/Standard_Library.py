@@ -232,3 +232,26 @@ for item in itertools.accumulate([1,2,3,4]):
 import operator
 for item in itertools.accumulate([1,2,3,4], operator.mul):
     print(item)
+
+'---------------------------------------------------------------------------'
+
+"""깔끔하게 출력하기: pprint()"""
+from collections import OrderedDict
+from pprint import pprint
+quotes = OrderedDict([
+    ('Moe', 'A wise guy, huh?'),
+    ('Larry', 'Ow!'),
+    ('Curly', 'Nyuk nyuk')
+])
+
+'''
+>>> print(quotes)
+OrderedDict([('Moe', 'A wise guy, huh?'), ('Larry', 'Ow!'), ('Curly', 'Nyuk nyuk')])
+'''
+# pprint는 프린트를 조금더 체계적으로 정리하여 보여준다.
+'''
+>>> pprint(quotes) 
+OrderedDict([('Moe', 'A wise guy, huh?'),
+             ('Larry', 'Ow!'),
+             ('Curly', 'Nyuk nyuk')])
+'''
