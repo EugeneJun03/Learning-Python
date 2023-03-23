@@ -324,13 +324,16 @@ ValueError: substring not found-1'''
 'Your leg is too short'
 '''
 
-'''7) 문자열 나누기(split)
+'''7) 문자열 나누기(split) + list()활용
 >>> a = "Life is too short"
 >>> a.split()
 ['Life', 'is', 'too', 'short']
 >>> b = "a:b:c:d"
 >>> b.split(':')
-['a', 'b', 'c', 'd']'''
+['a', 'b', 'c', 'd']
+>>> c = "안녕하세요"
+>>> c_list = list(c)
+['안', '녕', '하', '세', '요']'''
 
 '------------------------------------------------------------------------------'
 '''
