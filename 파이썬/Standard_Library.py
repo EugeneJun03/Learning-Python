@@ -257,3 +257,31 @@ OrderedDict([('Moe', 'A wise guy, huh?'),
 '''
 
 '---------------------------------------------------------------------------'
+
+"""7번 요소 출력하기: enumerate()
+enumerate는 해당 객체의 내용물과 인덱스를 동시에 알려주는 내장함수이다."""
+
+'''
+>>> seasons = ['Spring', 'Summer', 'Fall', 'Winter']
+>>> list(enumerate(seasons))
+[(0, 'Spring'), (1, 'Summer'), (2, 'Fall'), (3, 'Winter')]
+>>> list(enumerate(seasons, start=1))
+[(1, 'Spring'), (2, 'Summer'), (3, 'Fall'), (4, 'Winter')]'''
+
+# 함수 정의
+def enumerate(iterable, start=0):
+    n = start
+    for elem in iterable:
+        yield n, elem
+        n += 1
+
+#사용 예시(gambling_game.py)
+def print_slot_machine(columns): #이 함수는 가로로 출력되는 슬롯 머신을 세로로 출력되게 변환시켜주는 함수이다.
+    for row in range(len(columns[0])):
+        for i, colunm in enumerate(columns): # enumerate는 각 개체의 시퀀스 값과 그 자체의 값을 반환해주는 함수이다.
+            if i != len(columns) - 1:
+                print(colunm[row], end=" | ")
+            else:
+                print(colunm[row], end="")
+        print()
+#즉, columns의 인덱스 값이 i에 저장되고 내용물은 colunm에 대응시켜서 for문으로도 활용할 수 있다.
