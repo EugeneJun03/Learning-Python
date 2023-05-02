@@ -21,3 +21,15 @@ except ValueError:
     print("x is not a integer")
 else:
     print(f'x is {x}')
+
+# you can ues pass to avoid mentioning the error
+def get_int():
+    while True:
+        try:
+            x = int(input("What's x? "))
+        except ValueError:
+            pass
+        else:
+            break
+    print(f'x is {x}')
+get_int()
